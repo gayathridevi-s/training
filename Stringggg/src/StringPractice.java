@@ -15,7 +15,7 @@ public class StringPractice {
 					System.out.println(sb.substring(1, 5));
 					
 					String sister1="geethanjali";
-					String sister2="geethanjali";
+					String sister2="geethanjali ";
 					String sister3=new String("geethanjali");
 					System.out.println(sister1==sister2); //refers to same reference
 					System.out.println(sister1==sister3);//one is in pool and other is in non pool
