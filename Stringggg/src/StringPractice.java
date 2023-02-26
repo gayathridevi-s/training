@@ -64,15 +64,15 @@ public class StringPractice {
 
 	}
 }
- final class personalDetails{
-	public final String PANCARDNUMBER;
+ final class personalDetails{					//class is final
+	public final String pancardNumber;				//variable final
 	public  personalDetails(String number){     //immutable class
-		PANCARDNUMBER=number;
+		pancardNumber=number;
 	}
-	public String getDetails() {
-		return PANCARDNUMBER;
+	public String getDetails() {   		//getmethod
+		return pancardNumber;
 	}
-}
+}					//no setter methods,no option to change value
 
 class Details {
 	String name;
