@@ -1,8 +1,5 @@
 package com.innerclass;
 
-import java.security.DomainCombiner;
-
-
 public class Outer {
 	private int secretNumber=50;
 	private int x = 5;
