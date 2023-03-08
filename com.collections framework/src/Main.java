@@ -3,6 +3,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
@@ -82,6 +83,13 @@ public static void main(String[] args) {
 		sites.put("mozilla", 3);
 		sites.computeIfPresent("mozilla", (key,value)->value+1);
 		System.out.println(sites);
-			
+			LinkedHashMap<Integer,String> details=new LinkedHashMap<>();	//maintains insertion order
+			details.put(100, "Amit");
+			details.put(101, "sandul");
+			details.put(103, "reshmi");
+			System.out.println(details);
+			System.out.println(details.entrySet());
+			System.out.println(details.keySet());	//fetching key
+			System.out.println(details.values());	//fetching values
 }
 }
