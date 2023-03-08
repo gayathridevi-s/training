@@ -7,7 +7,10 @@ import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.NavigableMap;
+import java.util.NavigableSet;
 import java.util.Set;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 public class Main {
@@ -91,5 +94,23 @@ public static void main(String[] args) {
 			System.out.println(details.entrySet());
 			System.out.println(details.keySet());	//fetching key
 			System.out.println(details.values());	//fetching values
+			TreeMap<String,Integer>age=new TreeMap<>();
+			age.put("travind", 21);	
+			age.put("sarun", 22);
+			age.put("amritha", 23);
+			System.out.println(age);//ascending order
+			NavigableSet<String> name=age.descendingKeySet();
+			System.out.println( name);//descending order)
+			NavigableMap<String,Integer> listAge=age.descendingMap();
+			System.out.println(listAge);
+			TreeMap<Integer,String>birthday=new TreeMap<>();
+			birthday.put(24, "ravi");
+			birthday.put(1, "juhi");
+			birthday.put(16, "alex");
+			System.out.println(birthday);
+			System.out.println(birthday.descendingMap()+"descending order of map");
+			System.out.println(birthday.headMap(16,true));
+			System.out.println(birthday.tailMap(16,true));
+			System.out.println(birthday.clone());//creates copy
 }
 }
