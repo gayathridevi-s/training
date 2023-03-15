@@ -54,6 +54,10 @@ public static void main(String[] args) throws ClassNotFoundException, NoSuchMeth
 	//Class child=Class.forName("Student"); 
 	Constructor[] constructor=child.getConstructors();
 	System.out.println("constructors are :"+Arrays.toString(constructor));
+	Constructor newConstructors=child.getConstructor(String.class,int.class);
+	System.out.println("here is the constructor :"+newConstructors);
+	int parameterCount=newConstructors.getParameterCount();
+	System.out.println("paramter count of constructor are  :"+parameterCount);
 	String className=child.getName();	//object
 	System.out.println("classname is"+className);	//classname
 	System.out.println("get super class "+child.getSuperclass());	//superclass
@@ -92,6 +96,9 @@ public static void main(String[] args) throws ClassNotFoundException, NoSuchMeth
 	System.out.println(Arrays.toString(everyMethods)); //all public,inherited methods
 	Method[] declared=candidate1.getDeclaredMethods();
 	System.out.println("declared methods "+Arrays.toString(declared));
+	Method method1=candidate1.getMethod("examName");
+	int parameter=method1.getParameterCount();
+	System.out.println("parameter count of method1: s"+parameter);
 	java.lang.annotation.Annotation[] annotation=candidate1.getAnnotations();
 	System.out.println(Arrays.toString(annotation));
 	Class medicalStudent =Class.forName("Entrance");
